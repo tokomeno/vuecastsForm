@@ -30,17 +30,27 @@
  }
 
 
- // class Form {
+ class Form {
 
- //      constructor(data){
- //           // crate all key and values
- //           for (let field in data){
- //            this.field = data[data];
- //           }
- //      }
+      constructor(data){
+            this.data = data
+           // crate all key and values
+           for (let field in data){
+            this[field] = data[data];
+           }
+           this.errors = new Errors();
+      }
 
- //      reset(){
- //            this.name = ''
- //      }
+      reset(){
+            for (let field in data){
+            this[field] = '';
+           }
+      }
 
- // }
+      submit(){
+            // axios call
+      }
+
+
+
+ }

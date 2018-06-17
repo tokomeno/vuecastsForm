@@ -36,6 +36,7 @@ class PostController extends Controller
      */
     public function store(Request $request)
     {
+        // return $request;
         //
          $this->validate($request, [
             'name' => 'required|max:255',
@@ -46,7 +47,7 @@ class PostController extends Controller
             'desc' => $request->desc
         ]);
 
-        return $post;
+        return 'post added';
     }
 
     /**

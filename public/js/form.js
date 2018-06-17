@@ -25,19 +25,19 @@
 
      }
 
-     submit(requestType, url){
-      console.log(this.data())
-         axios[requestType](url, this.data())
-            .then(this.onSuccess.bind(this))
-            .catch(this.onFail.bind(this)); // this give param automaticly but how?
-     }
+     // submit(requestType, url){
+     //  console.log(this.data())
+     //     axios[requestType](url, this.data())
+     //        .then(this.onSuccess.bind(this))
+     //        .catch(this.onFail.bind(this)); // this give param automaticly but how?
+     // }
      
-     onSuccess(response){
-      this.reset();
-     }
+     // onSuccess(response){
+     //  this.reset();
+     // }
 
-     onFail(error){
-      this.errors.record(error.response.data.errors)
-     }
+     // onFail(error){
+     //  this.errors.record(error.response.data.errors)
+     // }
 
  }

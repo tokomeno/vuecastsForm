@@ -21,13 +21,12 @@
 
     {{-- <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet"> --}}
-
-      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  {{-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script> --}}
+  {{-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script> --}}
 {{--  --}}
 </head>
 <body>
@@ -44,7 +43,9 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav mr-auto">
-
+                        <li class="nav-item">
+                            <a href="/form" class="nav-link">Vue Form</a>
+                        </li>
                     </ul>
 
                     <!-- Right Side Of Navbar -->
@@ -88,7 +89,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.min.js"></script>
 
      <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.16/vue.js"></script> 
-<!-- <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>  -->
+{{-- <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>  --}}
 
 <script src='{{asset('js/errors.js')}}'></script>
 <script src='{{asset('js/form.js')}}'></script>

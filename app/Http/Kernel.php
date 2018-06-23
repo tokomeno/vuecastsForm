@@ -14,11 +14,13 @@ class Kernel extends HttpKernel
      * @var array
      */
     protected $middleware = [
-        \Illuminate\Foundation\Http\Middleware\CheckForMaintenanceMode::class,
+        // \Illuminate\Foundation\Http\Middleware\CheckForMaintenanceMode::class,
         \Illuminate\Foundation\Http\Middleware\ValidatePostSize::class,
         \App\Http\Middleware\TrimStrings::class,
         \Illuminate\Foundation\Http\Middleware\ConvertEmptyStringsToNull::class,
         \App\Http\Middleware\TrustProxies::class,
+// cros mine https://www.youtube.com/watch?v=84bXch-YIvI&index=4&list=PL55RiY5tL51rrgq6xi67Mc6cwOHXw_nB1
+        \App\Http\Middleware\Cors::class
     ];
 
     /**

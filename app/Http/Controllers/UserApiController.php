@@ -33,7 +33,7 @@ class UserApiController extends Controller
 
     public function signin(Request $request){
         $this->validate($request, [
-            'email' => 'required',
+            'email' => 'required|email',
             'password' => 'required'
         ]);
         $cred = $request->only(['email', 'password']);

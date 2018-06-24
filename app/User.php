@@ -17,7 +17,9 @@ class User extends Authenticatable implements JWTSubject
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password',
+        'name', 'email', 'password', 
+        'social_id',
+        'social_token'
     ];
 
     /**
@@ -42,5 +44,25 @@ class User extends Authenticatable implements JWTSubject
     public function getJWTCustomClaims()
     {
         return [];
+    }
+
+
+    public static function CreateOrFindSocialLogin($socialUser){
+
+        $user = User::where('social_id', $socialUser->id)->first();
+        if($user){
+            return $user;
+        }
+
+
+        // no user
+        return User::create([
+            'name' => $socialUser->name,
+            'email' => $socialUser->email,
+            'password' => bcrypt(str_random(12)),
+
+            'social_id' => $socialUser->id,
+            'social_token' => $socialUser->token
+        ]);
     }
 }

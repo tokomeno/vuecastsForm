@@ -21,4 +21,13 @@ Route::post('/post', 'PostController@store');
 
 Auth::routes();
 
+Route::get('login/github', 'Auth\LoginController@redirectToProviderGithub')->name('auth.github');
+Route::get('auth/github', 'Auth\LoginController@handleProviderCallbackGithub'); // git callback
+ 
+
+Route::get('login/facebook', 'Auth\LoginController@redirectToProviderFb')->name('auth.facebook');
+Route::get('auth/facebook', 'Auth\LoginController@handleProviderCallbackFb'); // fb callback
+
+
+
 Route::get('/home', 'HomeController@index')->name('home');

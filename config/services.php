@@ -35,4 +35,20 @@ return [
         'secret' => env('STRIPE_SECRET'),
     ],
 
+
+    'github' => [
+        'client_id' => env('GITHUB_CLIENT_ID'),         // Your GitHub Client ID
+        'client_secret' => env('GITHUB_CLIENT_SECRET'), // Your GitHub Client Secret
+        'redirect' => 'http://ground.io/auth/github',
+        // 'redirect' => env( 'FB_REDIRECT' ) 
+
+    ],
+
+    'facebook' => [ 
+        'client_id' => env('FB_CLIENT_ID' ),
+        'client_secret' => env('FB_CLIENT_SECRET' ),
+        // 'redirect' => env('FB_REDIRECT' )
+        'redirect' => 'http://localhost/ground/public/auth/facebook'
+    ],
+
 ];

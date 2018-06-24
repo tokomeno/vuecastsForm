@@ -58,9 +58,23 @@
                                 <a class="btn btn-link" href="{{ route('password.request') }}">
                                     {{ __('Forgot Your Password?') }}
                                 </a>
+                               
                             </div>
                         </div>
+                         <div class="form-group row mb-0">
+                            <div class="col-md-8 offset-md-4">
+                                <a class="btn btn-dark mt-2" href="{{route('auth.github')}}">Github Login</a>
+                            </div>
+                        </div>
+
+                         <div class="form-group row mb-0">
+                            <div class="col-md-8 offset-md-4">
+                                <a class="btn btn-primary mt-2" href="{{route('auth.facebook')}}">Facebook Login</a>
+                            </div>
+                        </div>
+                        
                     </form>
+                     
                 </div>
             </div>
         </div>

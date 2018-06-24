@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use App\Qoute;
 use Illuminate\Http\Request;
 
+use JWTAuth;
+
 class QouteController extends Controller
 {
  
@@ -17,7 +19,10 @@ class QouteController extends Controller
   
     public function store(Request $request)
     {
-        //
+       
+        if( !$user = JWTAuth::parseToken()->authenticate()){
+            return respone()->json(['message' => 'user not'], 404);
+        }
         $qoute = new Qoute();
         $qoute->content = $request->input('content');
         $qoute->save();

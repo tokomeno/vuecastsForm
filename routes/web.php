@@ -10,7 +10,12 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::get('/redis', function(){
+	 $redis = app()->make('redis');
+	 $redis->set('key1', 'testValie');
+	 return $redis->get('key1');
 
+});
 Route::get('/', function () {
     return view('home');
 });

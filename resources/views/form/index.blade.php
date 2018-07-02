@@ -101,7 +101,7 @@
 
                           <span class="text-danger" 
                           v-if="form.errors.has('name')" 
-                          v-text="form.errors.get('name')"></span>
+                          v-text="form.errors.get('name')">აგი შეავსე</span>
                     </div>
 
                     <div class="form-group"> 
